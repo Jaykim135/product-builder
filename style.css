@@ -29,8 +29,9 @@ body.dark-mode {
 body {
     font-family: sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Changed to column */
+    justify-content: flex-start; /* Align content from the start */
+    align-items: center; /* Center horizontally */
     min-height: 100vh;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -41,6 +42,19 @@ body {
     text-align: center;
     background-color: var(--container-bg-color);
     padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 40px; /* Add margin to top of main container */
+}
+
+.disqus-wrapper {
+    width: 80%; /* Adjust as needed */
+    max-width: 800px; /* Max width to keep it readable */
+    margin-top: 40px; /* Space from the main content */
+    margin-bottom: 40px; /* Space from the bottom */
+    background-color: var(--container-bg-color); /* Use theme background */
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
