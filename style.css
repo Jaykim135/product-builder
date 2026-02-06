@@ -1,16 +1,114 @@
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --ball-background-color: white;
+    --ball-border-color: #ccc;
+    --container-bg-color: #ffffff;
+    --button-bg-color: #4CAF50;
+    --button-text-color: white;
+    --button-hover-bg-color: #45a049;
+}
+
+body.dark-mode {
+    --background-color: #333;
+    --text-color: #f0f0f0;
+    --ball-background-color: #555;
+    --ball-border-color: #777;
+    --container-bg-color: #444;
+    --button-bg-color: #666;
+    --button-text-color: #f0f0f0;
+    --button-hover-bg-color: #777;
+}
+
 body {
     font-family: sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
     text-align: center;
+    background-color: var(--container-bg-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align to the right */
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Update other elements to use CSS variables */
 .balls-container {
     display: flex;
     gap: 10px;
@@ -21,22 +119,34 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: white;
-    border: 1px solid #ccc;
+    background-color: var(--ball-background-color);
+    border: 1px solid var(--ball-border-color);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
     font-weight: bold;
+    color: var(--text-color); /* Ensure ball text color changes */
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .powerball {
-    background-color: #ff0000;
+    background-color: #ff0000; /* Keep powerball red regardless of theme */
     color: white;
+    border-color: #ff0000; /* Ensure powerball border color is red */
 }
 
 #draw-button {
     padding: 10px 20px;
     font-size: 18px;
     cursor: pointer;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#draw-button:hover {
+    background-color: var(--button-hover-bg-color);
 }
