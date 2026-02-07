@@ -9,26 +9,48 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Powerball Lottery Drawer</h1>
-        <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round"></div>
-            </label>
-            <em>Enable Dark Mode!</em>
+    <main>
+        <div class="container">
+            <h1>Powerball Lottery Drawer</h1>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+                <em>Enable Dark Mode!</em>
+            </div>
+        
+            <div class="balls-container">
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball"></div>
+                <div class="ball powerball"></div>
+            </div>
+            <button id="draw-button">Draw Numbers</button>
         </div>
-    
-        <div class="balls-container">
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball powerball"></div>
-        </div>
-        <button id="draw-button">Draw Numbers</button>
-    </div>
+
+        <section class="info-section">
+            <h2>About Powerball</h2>
+            <p>Powerball is a multi-state lottery in the United States. It is known for its large jackpots, which often reach hundreds of millions of dollars. The game is played by selecting five numbers from a set of 69 white balls and one number from a set of 26 red Powerballs. To win the jackpot, players must match all six numbers drawn. There are also various other prize tiers for matching fewer numbers.</p>
+            <p>Drawings are held multiple times a week, and tickets can be purchased in 45 states, the District of Columbia, Puerto Rico, and the U.S. Virgin Islands.</p>
+        </section>
+
+        <section class="info-section">
+            <h2>How to Play Powerball</h2>
+            <ol>
+                <li>Choose five numbers between 1 and 69 for the white balls.</li>
+                <li>Choose one number between 1 and 26 for the red Powerball.</li>
+                <li>You can select your own numbers or use the "Quick Pick" option to have numbers randomly generated.</li>
+                <li>Tickets typically cost $2 per play.</li>
+                <li>Drawings occur on specific days (e.g., Monday, Wednesday, Saturday) at a set time.</li>
+                <li>Check your numbers against the official draw results. Prizes are awarded based on how many numbers you match.</li>
+            </ol>
+            <p>Remember to play responsibly and within your means. Lottery games are a form of entertainment and should not be seen as a source of income.</p>
+        </section>
+    </main>
+
     <script src="main.js"></script>
     <div class="disqus-wrapper">
         <div id="disqus_thread"></div>
@@ -46,5 +68,13 @@
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    <footer>
+        <p>&copy; 2026 Powerball Lottery Drawer. All rights reserved.</p>
+        <p>
+            <a href="/privacy-policy.html">Privacy Policy</a> | 
+            <a href="/terms-of-service.html">Terms of Service</a>
+        </p>
+    </footer>
 </body>
 </html>

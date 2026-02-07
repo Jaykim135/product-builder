@@ -46,6 +46,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     margin-top: 40px; /* Add margin to top of main container */
+    width: 80%;
+    max-width: 800px;
 }
 
 .disqus-wrapper {
@@ -234,5 +236,66 @@ p a {
 }
 
 p a:hover {
+    text-decoration: underline;
+}
+
+/* New styles for info sections and footer */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.info-section {
+    background-color: var(--container-bg-color);
+    color: var(--text-color);
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.info-section p, .info-section ol {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.info-section ol li {
+    margin-bottom: 5px;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--container-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
     text-decoration: underline;
 }
